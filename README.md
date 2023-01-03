@@ -44,8 +44,8 @@
             }
           }
         }}        
-        ```
-        
+        ```      
+       
 ## Azure CLI
 
 ### Current logged-in user
@@ -55,6 +55,12 @@
 export CURRENT_USER=$(az account show --query user.name -o tsv)
 export CURRENT_USER_OBJECTID=$(az ad user show --id $CURRENT_USER --query objectId -o tst)
 ```
+
+## Azure SDK
+
+* Iterators and paging through results
+  * Brian's blob post: [Async Iterators in the Azure SDK for JavaScript/TypeScript](https://devblogs.microsoft.com/azure-sdk/async-iterators-in-the-azure-sdk-for-javascript-typescript/)
+  * In order to get continuation token for next page, you have to call .next()
 
 ## Active Directory
 
