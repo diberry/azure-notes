@@ -106,6 +106,12 @@ export CURRENT_USER_OBJECTID=$(az ad user show --id $CURRENT_USER --query object
 
 * Has [jq](https://stedolan.github.io/jq/) (commandline JSON processor) installed
 
+## Cognitive Services
+
+### Content moderator
+
+* [Sample image](https://moderatorsampleimages.blob.core.windows.net/samples/sample2.jpg)
+
 ## Databases
 
 * [AdventureWorks](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)
