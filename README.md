@@ -114,6 +114,8 @@ export CURRENT_USER_OBJECTID=$(az ad user show --id $CURRENT_USER --query object
 
 ## Cognitive Services
 
+* [samples repo](https://github.com/Azure-Samples/cognitive-services-quickstart-code)
+
 ### Content moderator
 
 * [Sample image](https://moderatorsampleimages.blob.core.windows.net/samples/sample2.jpg)
