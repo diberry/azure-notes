@@ -56,6 +56,14 @@ export CURRENT_USER=$(az account show --query user.name -o tsv)
 export CURRENT_USER_OBJECTID=$(az ad user show --id $CURRENT_USER --query objectId -o tst)
 ```
 
+### sorted results
+
+Example of sorting all subscriptions by name. Supporting [documentation](https://learn.microsoft.com/cli/azure/query-azure-cli?tabs=concepts%2Cbash#manipulating-output-with-functions) for `sort_by`.
+
+```
+az account list --query "sort_by([].{Name:name, SubscriptionId:id, TenantId:tenantId}, &Name)" --output table
+```
+
 ## Azure SDK
 
 * Iterators and paging through results
