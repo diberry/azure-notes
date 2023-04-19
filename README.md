@@ -84,9 +84,14 @@ az account list --query "sort_by([].{Name:name, SubscriptionId:id, TenantId:tena
   * WEBSITE_AUTH_TENANT_ID - this is either your tenant or "COMMON", might be another name depending on how the config is programmed in JS
 * Port
   * 8080 is default
-  * change via App Setting ->  WEBSITES_PORT
+  * change via App Setting ->  WEBSITES_PORT or use following
+  
+  ```
+  process.env.PORT || 3000
+  ```
+  
 * Install NPM packages after Zip deploy
-  * App Setting -> SCM_DO_BUILD_DURING_DEPLOYMENT -> true
+  * App Setting -> SCM_DO_BUILD_DURING_DEPLOYMENT -> true - this setting is created for you if you create app service from VSCode
 * Configure logging to container logs
   * Monitoring -> Logs -> Enable
   * Download lixux logs: https://YOUR-RESOURCE-NAME.scm.azurewebsites.net/api/logs/docker/zip
@@ -146,6 +151,14 @@ az account list --query "sort_by([].{Name:name, SubscriptionId:id, TenantId:tena
 
 * Server-side JS - [Azure/azure-cosmosdb-js-server](https://github.com/Azure/azure-cosmosdb-js-server)
 * [Node sp sample](https://github.com/Azure/azure-cosmosdb-node/tree/master/samples/ServerSideScripts)
+
+### PostgreSQL
+
+#### Prisma URL
+
+```
+postgresql://USER@RESOURCENAME:PASSWORD@RESOURCENAME.postgres.database.azure.com:5432/DATABASENAME?&sslmode=require
+```
 
 ## Database emulators
 
