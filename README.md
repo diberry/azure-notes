@@ -1,5 +1,7 @@
 # azure-notes
 
+2023-05-19 - archived - use [personal repo](https://github.com/dfberry/azure-notes) to continue following my Azure notes
+
 ## Web properties
 
 * [JavaScript at Microsoft](https://developer.microsoft.com/en-us/javascript/)
